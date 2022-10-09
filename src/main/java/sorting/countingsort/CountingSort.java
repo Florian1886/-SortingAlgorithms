@@ -1,23 +1,20 @@
 package sorting.countingsort;
-
 import sorting.Sort;
-
+import sorting.Sorting;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CountingSort implements Sort {
-  private List<Integer> list = new ArrayList<>();
+public class CountingSort extends Sort implements Sorting {
 
   public CountingSort(List<Integer> list) {
-    this.list = list;
-  }
-
-  public List<Integer> getList() {
-    return list;
-  }
-
-  public void setList(List<Integer> list) {
-    this.list = list;
+    super(list);
+    consoleOut.consoleStartCounting();
+    final long startTime = timeCounter.getTime();
+    list = this.sort();
+    final long endTime = timeCounter.getTime();
+    consoleOut.printResult(list);
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.showTime(time);
   }
   @Override
   public List<Integer> sort(){
@@ -42,8 +39,6 @@ public class CountingSort implements Sort {
         count[i]--;
       }
     }
-
-
     return resultSorted;
   }
 }

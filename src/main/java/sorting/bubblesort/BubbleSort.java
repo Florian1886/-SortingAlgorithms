@@ -1,23 +1,19 @@
 package sorting.bubblesort;
-
 import sorting.Sort;
-
-import java.util.ArrayList;
+import sorting.Sorting;
 import java.util.List;
 
-public class BubbleSort implements Sort {
+public class BubbleSort extends Sort implements Sorting {
 
-  private List<Integer> list = new ArrayList<>();
   public BubbleSort(List<Integer> list) {
-    this.setList(list);
-  }
-
-  public List<Integer> getList() {
-    return list;
-  }
-
-  public void setList(List<Integer> list) {
-    this.list = list;
+    super(list);
+    consoleOut.consoleStartBubble();
+    final long startTime = timeCounter.getTime();
+    list = this.sort();
+    final long endTime = timeCounter.getTime();
+    consoleOut.printResult(list);
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.showTime(time);
   }
   @Override
   public List<Integer> sort(){

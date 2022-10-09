@@ -1,61 +1,58 @@
 package sorting.quicksort;
-
 import sorting.Sort;
-
-import java.util.ArrayList;
+import sorting.Sorting;
 import java.util.List;
 
-public class QuickSort implements Sort {
-  private List<Integer> list = new ArrayList<>();
+public class QuickSort extends Sort implements Sorting {
 
   public QuickSort(List<Integer> list) {
-    this.list = list;
-  }
-
-  public List<Integer> getList() {
-    return list;
-  }
-
-  public void setList(List<Integer> list) {
-    this.list = list;
+    super(list);
+    consoleOut.consoleStartQuick();
+    final long startTime = timeCounter.getTime();
+    list = this.sort();
+    final long endTime = timeCounter.getTime();
+    consoleOut.printResult(list);
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.showTime(time);
   }
 
   @Override
-  public List<Integer> sort(){
+  public List<Integer> sort() {
     List<Integer> copiedList = this.getList();
-    quicksort(copiedList,0, copiedList.size()-1);
+    quicksort(copiedList, 0, copiedList.size() - 1);
     return copiedList;
-    }
-
-
-  private void quicksort(List<Integer> lista, int frontList, int backList){
-    int i = frontList;
-    int j = backList;
-    int pivot = lista.get((i+j)/2);
-    int temp;
-
-    while(i<=j){
-      while(lista.get(i)<pivot){
-        i++;
-      }
-      while(lista.get(j)>pivot){
-        j--;
-      }
-      if(i<=j){
-        temp = lista.get(i);
-        lista.set(i,lista.get(j));
-        lista.set(j,temp);
-        i++;
-        j--;
-      }
-      if(frontList<j){
-        quicksort(lista,frontList,j);
-      }
-      if(backList<i){
-        quicksort(lista,i,backList);
-      }
-    }
-
   }
 
+
+  private void quicksort(List<Integer> lista, int frontList, int backList) {
+    int i = frontList;
+    int j = backList;
+    int pivot = lista.get((i + j) / 2);
+    int temp;
+
+    do {
+      while (lista.get(i) < pivot) {
+        i++;
+      }
+      while (lista.get(j) > pivot) {
+        j--;
+      }
+      if (i <= j) {
+        temp = lista.get(i);
+        lista.set(i, lista.get(j));
+        lista.set(j, temp);
+        i++;
+        j--;
+      }
+    }
+    while (i <= j);
+    if (frontList < j) {
+      quicksort(lista, frontList, j);
+    }
+    if (i < backList) {
+      quicksort(lista, i, backList);
+    }
+  }
 }
+
+
