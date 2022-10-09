@@ -1,9 +1,11 @@
-package bubblesort;
+package sorting.bubblesort;
+
+import sorting.Sort;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BubbleSort {
+public class BubbleSort implements Sort {
 
   private List<Integer> list = new ArrayList<>();
   public BubbleSort(List<Integer> list) {
@@ -17,6 +19,7 @@ public class BubbleSort {
   public void setList(List<Integer> list) {
     this.list = list;
   }
+  @Override
   public List<Integer> sort(){
     List<Integer> copiedList = this.getList();
     int temp;

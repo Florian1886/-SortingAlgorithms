@@ -1,9 +1,11 @@
-package quicksort;
+package sorting.quicksort;
+
+import sorting.Sort;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuickSort {
+public class QuickSort implements Sort {
   private List<Integer> list = new ArrayList<>();
 
   public QuickSort(List<Integer> list) {
@@ -17,6 +19,8 @@ public class QuickSort {
   public void setList(List<Integer> list) {
     this.list = list;
   }
+
+  @Override
   public List<Integer> sort(){
     List<Integer> copiedList = this.getList();
     quicksort(copiedList,0, copiedList.size()-1);
@@ -53,4 +57,5 @@ public class QuickSort {
     }
 
   }
+
 }

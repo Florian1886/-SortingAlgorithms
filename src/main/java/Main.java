@@ -1,21 +1,17 @@
-import bubblesort.BubbleSort;
-import quicksort.QuickSort;
-
+import random.RandomListGenerator;
+import sorting.bubblesort.BubbleSort;
+import sorting.countingsort.CountingSort;
+import sorting.quicksort.QuickSort;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Main {
   public static void main(String[] args) {
-    Random rand = new Random();
-    List<Integer> listBubble = new ArrayList<>();
-    int helper;
-    for(int i = 0; i < 50; i++){
-      helper = rand.nextInt(0,100);
-      listBubble.add(helper);
-      System.out.print(helper + " ");
-    }
-    List<Integer> listQuick = listBubble;
+    RandomListGenerator randomListGenerator = new RandomListGenerator();
+    List<Integer> listRandom = randomListGenerator.generateNumbers();
+    List<Integer> listBubble = new ArrayList<>(listRandom);
+    List<Integer> listQuick = new ArrayList<>(listRandom);
+    List<Integer> listCounting = new ArrayList<>(listRandom);
 
     System.out.println();
     System.out.println("Bubble sort");
@@ -34,7 +30,7 @@ public class Main {
 
     System.out.println();
     System.out.println("Time = " + (endBubble - startBubble)/1000 + "ms");
-    //next
+    //Quick
 
     System.out.println();
     System.out.println("Quick sort");
@@ -53,5 +49,25 @@ public class Main {
 
     System.out.println();
     System.out.println("Time = " + (endQuick - startQuick)/1000 + "ms");
+    //Counting
+
+    System.out.println();
+    System.out.println("Counting sort");
+    System.out.println("Złożonośc obliczeniowa : O(n+k)");
+    System.out.println("Złożonośc pamięciowa : O(k)");
+
+    CountingSort countingSort = new CountingSort(listCounting);
+
+    long startCounting = System.nanoTime();
+    List<Integer> resultCounting  = countingSort.sort();
+    long endCounting = System.nanoTime();
+
+    for(int s : resultCounting){
+      System.out.print(s + " ");
+    }
+
+    System.out.println();
+    System.out.println("Time = " + (endCounting - startCounting)/1000 + "ms");
+
   }
 }
