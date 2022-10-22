@@ -1,4 +1,5 @@
 package sorting.countingsort;
+
 import sorting.Sorting;
 import sorting.Sort;
 
@@ -18,8 +19,9 @@ public class CountingSort extends Sort implements Sorting {
     consoleOut.printResult(list);
     consoleOut.showTime(time);
   }
+
   @Override
-  public List<Integer> sort(){
+  public List<Integer> sort() {
     List<Integer> copiedList = this.getList();
     int max = 0;
     for (Integer integer : copiedList) {
@@ -27,15 +29,15 @@ public class CountingSort extends Sort implements Sorting {
         max = integer;
       }
     }
-    int[] count = new int[max+1];
+    int[] count = new int[max + 1];
     Arrays.fill(count, 0);
 
     for (Integer integer : copiedList) {
       count[integer]++;
     }
     List<Integer> resultSorted = new ArrayList<>();
-    for(int i = 0; i < max + 1; i++){
-      while(count[i] > 0){
+    for (int i = 0; i < max + 1; i++) {
+      while (count[i] > 0) {
         resultSorted.add(i);
         count[i]--;
       }

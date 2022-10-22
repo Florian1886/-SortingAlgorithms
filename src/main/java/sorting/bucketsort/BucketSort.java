@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class BucketSort  extends Sort implements Sorting {
+public class BucketSort extends Sort implements Sorting {
 
   private final int quantityBuckets = SortingAlgorithmsConfiguration.NUMBER_OF_BUCKETS; //zmienic
 
-  public BucketSort(List<Integer> list){
+  public BucketSort(List<Integer> list) {
     super(list);
     consoleOut.consoleStartBucket();
     final long startTime = timeCounter.getTime();
@@ -22,22 +22,23 @@ public class BucketSort  extends Sort implements Sorting {
     consoleOut.printResult(list);
     consoleOut.showTime(time);
   }
+
   @Override
   public List<Integer> sort() {
     List<Integer> copiedList = this.getList();
     ArrayList<Integer>[] buckets = new ArrayList[quantityBuckets];
-    for(int i = 0; i<quantityBuckets; i++){
+    for (int i = 0; i < quantityBuckets; i++) {
       buckets[i] = new ArrayList<Integer>();
     }
     for (Integer integer : copiedList) {
       int bucketIndex = integer / quantityBuckets;
       buckets[bucketIndex].add(integer);
     }
-    for(int i = 0; i < quantityBuckets; i++){
+    for (int i = 0; i < quantityBuckets; i++) {
       Collections.sort(buckets[i]);
     }
     List<Integer> resultSorted = new ArrayList<>();
-    for(int i = 0; i < quantityBuckets ; i++){
+    for (int i = 0; i < quantityBuckets; i++) {
       resultSorted.addAll(buckets[i]);
     }
     return resultSorted;

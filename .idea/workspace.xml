@@ -5,22 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e99e9925-c360-4c53-9461-a9acfba35ffd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/config/SortingAlgorithmsConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/logic/MenuPressedKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/random/RandomListGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/sorting/bucketsort/BucketSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sorting/mergesort/MergeSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/consoleout/ConsoleOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/consoleout/ConsoleOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/TimeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/logic/TimeCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/random/RandomListGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/sorting/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/sorting/Sorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/bubblesort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/sorting/bubblesort/BubbleSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/countingsort/CountingSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/sorting/countingsort/CountingSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/quicksort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/sorting/quicksort/QuickSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/timecounter/TimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/timecounter/TimeCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/SortingAlgorithmsConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/SortingAlgorithmsConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/consoleout/ConsoleOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/consoleout/ConsoleOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MenuPressedKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/MenuPressedKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/TimeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/TimeCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/bubblesort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/bubblesort/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/bucketsort/BucketSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/bucketsort/BucketSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/countingsort/CountingSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/countingsort/CountingSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/quicksort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/quicksort/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/timecounter/TimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/timecounter/TimeCounter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,17 +45,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Roksana/IdeaProjects/SortingAlgorithms",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Roksana/IdeaProjects/SortingAlgorithms&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

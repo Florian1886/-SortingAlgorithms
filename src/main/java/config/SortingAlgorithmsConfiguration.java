@@ -11,6 +11,7 @@ public class SortingAlgorithmsConfiguration {
   public static final int QUICKSORT_KEYNUMBER = 2;
   public static final int COUNTINGSORT_KEYNUMBER = 3;
   public static final int BUCKETSORT_KEYNUMBER = 4;
-  public static final int ALLSORT_KEYNUMBER = 5;
+  public static final int MERGESORT_KEYNUMBER = 5;
+  public static final int ALLSORT_KEYNUMBER = 6;
   public static final int EXIT_KEYNUMBER = 0;
 }

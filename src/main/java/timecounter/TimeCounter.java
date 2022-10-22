@@ -2,7 +2,7 @@ package timecounter;
 
 public class TimeCounter {
 
-  public long getTime(){
+  public long getTime() {
     return System.nanoTime();
   }
 }
