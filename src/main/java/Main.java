@@ -1,25 +1,22 @@
-import random.RandomListGenerator;
-import sorting.bubblesort.BubbleSort;
-import sorting.countingsort.CountingSort;
-import sorting.quicksort.QuickSort;
-import java.util.ArrayList;
-import java.util.List;
+import consoleout.ConsoleOut;
+import logic.MenuPressedKey;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    RandomListGenerator randomListGenerator = new RandomListGenerator();
-    List<Integer> listRandom = randomListGenerator.generateNumbers();
-    List<Integer> listBubble = new ArrayList<>(listRandom);
-    List<Integer> listQuick = new ArrayList<>(listRandom);
-    List<Integer> listCounting = new ArrayList<>(listRandom);
+    boolean shouldContinue;
+    ConsoleOut consoleOut = new ConsoleOut();
+    MenuPressedKey menuPressedKey = new MenuPressedKey();
+    Scanner scanner = new Scanner(System.in);
+    do {
+      consoleOut.showMenu();
+      while(!scanner.hasNextInt()) {
+        consoleOut.pressedOtherThanInt();
+        scanner.nextLine();
+      }
+      shouldContinue = menuPressedKey.checkPressedKey(scanner.nextInt());
+      scanner.nextLine();
 
-    //Bubble
-     new BubbleSort(listBubble);
-    //Quick
-    new QuickSort(listQuick);
-    //Counting
-    new CountingSort(listCounting);
-
-
+    }while(shouldContinue);
   }
 }

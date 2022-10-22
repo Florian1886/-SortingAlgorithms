@@ -1,7 +1,9 @@
 package sorting.countingsort;
-import sorting.Sort;
 import sorting.Sorting;
+import sorting.Sort;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CountingSort extends Sort implements Sorting {
@@ -12,8 +14,8 @@ public class CountingSort extends Sort implements Sorting {
     final long startTime = timeCounter.getTime();
     list = this.sort();
     final long endTime = timeCounter.getTime();
-    consoleOut.printResult(list);
     final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.printResult(list);
     consoleOut.showTime(time);
   }
   @Override
@@ -26,11 +28,10 @@ public class CountingSort extends Sort implements Sorting {
       }
     }
     int[] count = new int[max+1];
-    for(int i = 0; i<count.length;i++){
-      count[i] = 0;
-    }
-    for(int i = 0; i<copiedList.size(); i++){
-      count[copiedList.get(i)]++;
+    Arrays.fill(count, 0);
+
+    for (Integer integer : copiedList) {
+      count[integer]++;
     }
     List<Integer> resultSorted = new ArrayList<>();
     for(int i = 0; i < max + 1; i++){

@@ -1,6 +1,7 @@
 package sorting.quicksort;
-import sorting.Sort;
 import sorting.Sorting;
+import sorting.Sort;
+
 import java.util.List;
 
 public class QuickSort extends Sort implements Sorting {
@@ -11,8 +12,8 @@ public class QuickSort extends Sort implements Sorting {
     final long startTime = timeCounter.getTime();
     list = this.sort();
     final long endTime = timeCounter.getTime();
-    consoleOut.printResult(list);
     final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.printResult(list);
     consoleOut.showTime(time);
   }
 
