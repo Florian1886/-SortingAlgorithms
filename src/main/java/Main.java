@@ -19,5 +19,6 @@ public class Main {
       scanner.nextLine();
 
     } while (shouldContinue);
+    scanner.close();
   }
 }
