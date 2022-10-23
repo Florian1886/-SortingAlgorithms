@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e99e9925-c360-4c53-9461-a9acfba35ffd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/logic/MenuPressedKeyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sorting/bubblesort/BubbleSortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sorting/bucketsort/BucketSortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sorting/countingsort/CountingSortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sorting/mergesort/MergeSortTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/sorting/quicksort/QuickSortTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MenuPressedKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/MenuPressedKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/random/RandomListGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/random/RandomListGenerator.java" afterDir="false" />
-    </list>
+    <list default="true" id="e99e9925-c360-4c53-9461-a9acfba35ffd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
