@@ -30,7 +30,8 @@ public class RandomListGenerator {
     int numberQuantity = SortingAlgorithmsConfiguration.NUMBERS_TO_GENERATE; //zrobic potem od uzytkownika
     int randomNumber;
     for (int i = 0; i < numberQuantity; i++) {
-      randomNumber = rand.nextInt(SortingAlgorithmsConfiguration.LOWER_BOUND, SortingAlgorithmsConfiguration.UPPER_BOUND);
+      randomNumber = rand.nextInt(SortingAlgorithmsConfiguration.LOWER_BOUND
+              , SortingAlgorithmsConfiguration.UPPER_BOUND);
       numberList.add(randomNumber);
       consoleOut.printNumber(randomNumber);
     }

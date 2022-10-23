@@ -25,6 +25,21 @@ public class MenuPressedKey {
       consoleOut.pressedWrongNumber();
       return true;
     }
+    this.chooseSort(pressedKey);
+    return true;
+  }
+
+
+  private boolean validateKey(int pressedKey) {
+    return pressedKey > SortingAlgorithmsConfiguration.EXIT_KEYNUMBER &&
+            pressedKey <= SortingAlgorithmsConfiguration.ALLSORT_KEYNUMBER;
+  }
+
+  private boolean checkExit(int pressedKey) {
+    return pressedKey == SortingAlgorithmsConfiguration.EXIT_KEYNUMBER;
+  }
+
+  private void chooseSort(int pressedKey) {
     RandomListGenerator randomListGenerator = new RandomListGenerator();
 
     switch (pressedKey) {
@@ -57,15 +72,5 @@ public class MenuPressedKey {
       }
       default -> System.out.println("Oops");
     }
-    return true;
-  }
-
-  private boolean validateKey(int pressedKey) {
-    return pressedKey > SortingAlgorithmsConfiguration.EXIT_KEYNUMBER &&
-            pressedKey <= SortingAlgorithmsConfiguration.ALLSORT_KEYNUMBER;
-  }
-
-  private boolean checkExit(int pressedKey) {
-    return pressedKey == SortingAlgorithmsConfiguration.EXIT_KEYNUMBER;
   }
 }
