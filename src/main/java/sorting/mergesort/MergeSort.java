@@ -10,20 +10,19 @@ public class MergeSort extends Sort implements Sorting {
 
   public MergeSort(List<Integer> list) {
     super(list);
-    consoleOut.consoleStartMerge();
-    final long startTime = timeCounter.getTime();
-    list = this.sort();
-    final long endTime = timeCounter.getTime();
-    final long time = timeCalculator.calculateTime(startTime, endTime);
-    consoleOut.printResult(list);
-    consoleOut.showTime(time);
+
   }
 
   @Override
-  public List<Integer> sort() {
+  public void sort() {
+    consoleOut.consoleStartMerge();
+    final long startTime = timeCounter.getTime();
     List<Integer> copiedList = this.getList();
     mergesort(copiedList, 0, copiedList.size() - 1);
-    return copiedList;
+    final long endTime = timeCounter.getTime();
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.printResult(copiedList);
+    consoleOut.showTime(time);
   }
 
   private void mergesort(List<Integer> copiedList, int minArrayIndex, int maxArrayIndex) {

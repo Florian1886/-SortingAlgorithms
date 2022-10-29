@@ -11,17 +11,12 @@ public class CountingSort extends Sort implements Sorting {
 
   public CountingSort(List<Integer> list) {
     super(list);
-    consoleOut.consoleStartCounting();
-    final long startTime = timeCounter.getTime();
-    list = this.sort();
-    final long endTime = timeCounter.getTime();
-    final long time = timeCalculator.calculateTime(startTime, endTime);
-    consoleOut.printResult(list);
-    consoleOut.showTime(time);
   }
 
   @Override
-  public List<Integer> sort() {
+  public void sort() {
+    consoleOut.consoleStartCounting();
+    final long startTime = timeCounter.getTime();
     List<Integer> copiedList = this.getList();
     int max = 0;
     for (Integer integer : copiedList) {
@@ -42,6 +37,9 @@ public class CountingSort extends Sort implements Sorting {
         count[i]--;
       }
     }
-    return resultSorted;
+    final long endTime = timeCounter.getTime();
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.printResult(resultSorted);
+    consoleOut.showTime(time);
   }
 }

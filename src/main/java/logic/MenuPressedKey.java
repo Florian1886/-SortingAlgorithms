@@ -23,9 +23,9 @@ public class MenuPressedKey {
     }
     if (!keyInRange) {
       consoleOut.pressedWrongNumber();
-      return true;
+    } else{
+      this.chooseSort(pressedKey);
     }
-    this.chooseSort(pressedKey);
     return true;
   }
 
@@ -44,19 +44,24 @@ public class MenuPressedKey {
 
     switch (pressedKey) {
       case 1 -> {
-        new BubbleSort(randomListGenerator.getList());
+        BubbleSort bubbleSort = new BubbleSort(randomListGenerator.getList());
+        bubbleSort.sort();
       }
       case 2 -> {
-        new QuickSort(randomListGenerator.getList());
+        QuickSort quickSort = new QuickSort(randomListGenerator.getList());
+        quickSort.sort();
       }
       case 3 -> {
-        new CountingSort(randomListGenerator.getList());
+        CountingSort countingSort = new CountingSort(randomListGenerator.getList());
+        countingSort.sort();
       }
       case 4 -> {
-        new BucketSort(randomListGenerator.getList());
+        BucketSort bucketSort = new BucketSort(randomListGenerator.getList());
+        bucketSort.sort();
       }
       case 5 -> {
-        new MergeSort(randomListGenerator.getList());
+        MergeSort mergeSort = new MergeSort(randomListGenerator.getList());
+        mergeSort.sort();
       }
       case 6 -> {
         List<Integer> listBubble = new ArrayList<>(randomListGenerator.getList());
@@ -64,11 +69,16 @@ public class MenuPressedKey {
         List<Integer> listCounting = new ArrayList<>(randomListGenerator.getList());
         List<Integer> listBucket = new ArrayList<>(randomListGenerator.getList());
         List<Integer> listMerge = new ArrayList<>(randomListGenerator.getList());
-        new BubbleSort(listBubble);
-        new QuickSort(listQuick);
-        new CountingSort(listCounting);
-        new BucketSort(listBucket);
-        new MergeSort(listMerge);
+        BubbleSort bubbleSort = new BubbleSort(listBubble);
+        QuickSort quickSort = new QuickSort(listQuick);
+        CountingSort countingSort = new CountingSort(listCounting);
+        BucketSort bucketSort =new BucketSort(listBucket);
+        MergeSort mergeSort = new MergeSort(listMerge);
+        bubbleSort.sort();
+        quickSort.sort();
+        countingSort.sort();
+        bucketSort.sort();
+        mergeSort.sort();
       }
       default -> System.out.println("Oops");
     }

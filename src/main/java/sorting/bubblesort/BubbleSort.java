@@ -9,17 +9,14 @@ public class BubbleSort extends Sort implements Sorting {
 
   public BubbleSort(List<Integer> list) {
     super(list);
-    consoleOut.consoleStartBubble();
-    final long startTime = timeCounter.getTime();
-    list = this.sort();
-    final long endTime = timeCounter.getTime();
-    final long time = timeCalculator.calculateTime(startTime, endTime);
-    consoleOut.printResult(list);
-    consoleOut.showTime(time);
   }
 
   @Override
-  public List<Integer> sort() {
+  public void sort() {
+
+    consoleOut.consoleStartBubble();
+    final long startTime = timeCounter.getTime();
+
     List<Integer> copiedList = this.getList();
     int temp;
     for (int i = 0; i < copiedList.size(); i++) {
@@ -31,6 +28,9 @@ public class BubbleSort extends Sort implements Sorting {
         }
       }
     }
-    return copiedList;
+    final long endTime = timeCounter.getTime();
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.printResult(copiedList);
+    consoleOut.showTime(time);
   }
 }

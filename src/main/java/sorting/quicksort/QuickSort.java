@@ -9,20 +9,19 @@ public class QuickSort extends Sort implements Sorting {
 
   public QuickSort(List<Integer> list) {
     super(list);
-    consoleOut.consoleStartQuick();
-    final long startTime = timeCounter.getTime();
-    list = this.sort();
-    final long endTime = timeCounter.getTime();
-    final long time = timeCalculator.calculateTime(startTime, endTime);
-    consoleOut.printResult(list);
-    consoleOut.showTime(time);
   }
 
   @Override
-  public List<Integer> sort() {
+  public void sort() {
+
+    consoleOut.consoleStartQuick();
+    final long startTime = timeCounter.getTime();
     List<Integer> copiedList = this.getList();
     quicksort(copiedList, 0, copiedList.size() - 1);
-    return copiedList;
+    final long endTime = timeCounter.getTime();
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.printResult(copiedList);
+    consoleOut.showTime(time);
   }
 
 

@@ -14,17 +14,14 @@ public class BucketSort extends Sort implements Sorting {
 
   public BucketSort(List<Integer> list) {
     super(list);
-    consoleOut.consoleStartBucket();
-    final long startTime = timeCounter.getTime();
-    list = this.sort();
-    final long endTime = timeCounter.getTime();
-    final long time = timeCalculator.calculateTime(startTime, endTime);
-    consoleOut.printResult(list);
-    consoleOut.showTime(time);
   }
 
   @Override
-  public List<Integer> sort() {
+  public void sort() {
+
+    consoleOut.consoleStartBucket();
+    final long startTime = timeCounter.getTime();
+
     List<Integer> copiedList = this.getList();
     ArrayList<Integer>[] buckets = new ArrayList[quantityBuckets];
     for (int i = 0; i < quantityBuckets; i++) {
@@ -41,6 +38,9 @@ public class BucketSort extends Sort implements Sorting {
     for (int i = 0; i < quantityBuckets; i++) {
       resultSorted.addAll(buckets[i]);
     }
-    return resultSorted;
+    final long endTime = timeCounter.getTime();
+    final long time = timeCalculator.calculateTime(startTime, endTime);
+    consoleOut.printResult(resultSorted);
+    consoleOut.showTime(time);
   }
 }

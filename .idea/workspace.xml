@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e99e9925-c360-4c53-9461-a9acfba35ffd" name="Changes" comment="" />
+    <list default="true" id="e99e9925-c360-4c53-9461-a9acfba35ffd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/MenuPressedKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/MenuPressedKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/Sorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/bubblesort/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/bubblesort/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/bucketsort/BucketSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/bucketsort/BucketSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/countingsort/CountingSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/countingsort/CountingSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/mergesort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/mergesort/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sorting/quicksort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sorting/quicksort/QuickSort.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +67,14 @@
       <recent name="sorting.mergesort" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MenuPressedKeyTest.checkPressedKey">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="SortingAlgorithms" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in SortingAlgorithms" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SortingAlgorithms" />
       <option name="PACKAGE_NAME" value="" />
@@ -85,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MenuPressedKeyTest.checkPressedKey" />
         <item itemvalue="JUnit.All in SortingAlgorithms" />
       </list>
